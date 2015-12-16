@@ -17,8 +17,9 @@ public class CurrentPrice : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        currentPrice -= Time.deltaTime;
-        priceText.text = "Current Price: " + (int)currentPrice;
+        currentPrice -= Time.deltaTime*Random.RandomRange(1.0f, 100.0f);
+
+        priceText.text = "Current Price: $" + currentPrice;
 	
 	}
 }
